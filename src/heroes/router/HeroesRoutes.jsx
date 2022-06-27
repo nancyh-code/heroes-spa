@@ -10,9 +10,10 @@ export const HeroesRoutes = () => {
         <Routes>
           <Route path='marvel' element={<MarvelPage />} />
           <Route path='dc' element={<DcPage />} />
-          <Route path='search' element={<HeroPage />} />
-          <Route path='hero' element={<SearchPage />} />
+          <Route path='hero/:id' element={<HeroPage />} />
+          <Route path='search' element={<SearchPage />} />
           {/* Search, HeroById*/}
+          {/* Esto se usa para establecer el home o la page por defecto */}
           <Route path='/' element={<Navigate to='/marvel' />} />
         </Routes>
       </div>
